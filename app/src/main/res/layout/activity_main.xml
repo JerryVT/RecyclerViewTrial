@@ -12,8 +12,31 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:padding="5dp"
-        tools:listitem="@layout/recycler_item">
+        android:layout_above="@+id/buttons"
+        tools:listitem="@layout/recycler_item"/>
 
-    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:clipToPadding="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Insert Item"
+            android:layout_weight="1"
+            android:onClick="insertItem"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remove Item"
+            android:layout_weight="1"
+            android:onClick="removeItem"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
